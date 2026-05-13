@@ -1,0 +1,303 @@
+/*
+Program Name: style.css
+Author: Harrison Tadlock
+Date Created: February 18, 2025
+Date Modified: May 12, 2026
+Version Number: 2.1
+Description: Does Formatting
+Changes:
+04/07/2026: 2.0 | updated from mis3371
+05/12/2026: 2.1 | removed formatting of removed function 
+*/
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #b0bed1;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo-text img {
+    border-radius: 10px;
+    border: 2px solid #aaa;
+}
+
+header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+#datetime {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Form Section */
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Error Styling */
+.error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* Fieldsets */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Range Input */
+input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Radio & Checkbox Styling */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+    margin-left: 5px;
+}
+
+/* Buttons */
+
+    /* Button container */
+    button-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+input[type="submit"],
+input[type="reset"],
+input[id="validate"],
+input[id="review"] {
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"] {
+    background-color: #2ecc71;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #27ae60;
+}
+
+input[type="reset"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+input[type="reset"]:hover {
+    background-color: #c0392b;
+}
+
+input[id="review"] {
+    background-color: #799b3d;
+    color: white;
+}
+
+input[id="review"]:hover {
+    background-color: #799b3d;
+}
+
+input[id="validate"] {
+    background-color: #d0a720;
+    color: white;
+}
+
+input[id="validate"]:hover {
+    background-color: #d0a720;
+}
+
+/* Highlight invalid fields */
+input.invalid, select.invalid, textarea.invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+  }
+  
+/* Highlight valid fields */
+input.valid, select.valid, textarea.valid {
+border: 2px solid green;
+background-color: #e6ffe6;
+}
+
+/* Output Table */
+table.output,
+tr.output,
+td.output {
+    width: 500px;
+    background-color: #774a8b;
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Sticky Header */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #68b4c1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 100;
+    transition: background-color 0.5s ease;
+}
+
+/* Sticky Footer */
+footer {
+    position: sticky;
+    bottom: 10;
+    width: 100%;
+    background-color: #b7e0e8;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Welcome Message */
+#welcome1,
+#welcome2 {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0c6170;
+}
+
+/* Link for 'Not [Name]?' */
+#welcome2 a {
+    font-weight: normal;
+    font-size: 14px;
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+/* User Greeting */
+#user-greeting {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0c6170;
+}
+
+/* Styling for the "Not [Name]" link */
+#user-greeting a {
+    color: #0077cc;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+#user-greeting a:hover {
+    color: #0056a3;
+}
+
+/* Make form more readable with padding/margins */
+form {
+    margin-bottom: 50px; /* Leave room for sticky footer */
+    padding: 20px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .iframe-container {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* end of style.css file */
